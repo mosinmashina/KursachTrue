@@ -8,14 +8,16 @@ using System.Drawing;
 
 namespace Kursach.Models
 {
-    public class Gladiator: Entity
+    public class Gladiator : Entity
     {
+        public bool slowDeath;
+
         public Gladiator()
         {
 
         }
 
-        public Gladiator(int posX, int posY, Image spriteSheet): base(posX, posY, spriteSheet)
+        public Gladiator(int posX, int posY, Image spriteSheet) : base(posX, posY, spriteSheet)
         {
             size = 31;
             idleFrames = 5;
@@ -25,6 +27,8 @@ namespace Kursach.Models
             currentLimit = idleFrames;
             playerModelSize = new Size(150, 150);
             hitPoints = 3;
+            spriteSheetUnderAttack = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\GladiatorUnderAttack.png");
+            slowDeath = true;
         }
 
         public override void Move(int howMove)
@@ -46,6 +50,8 @@ namespace Kursach.Models
 
         public void changeDirection(Hero player)
         {
+            if (currentAnimation == 4 || currentAnimation == 9)
+                return;
             if (player.posX > posX)
             {
                 dirX = 5;
@@ -58,10 +64,12 @@ namespace Kursach.Models
                 flip = -1;
                 SetAnimationConfiguration(6);
             }
+            else dirX = 0;
             if (player.posY > posY)
                 dirY = 5;
             else if (player.posY < posY)
                 dirY = -5;
+            else dirY = 0;
             Move(0);
         }
 
@@ -82,6 +90,7 @@ namespace Kursach.Models
                 case 3:
                     break;
                 case 4:
+                    currentLimit = deathFrames;
                     break;
                 case 5:
                     currentLimit = idleFrames;
@@ -95,6 +104,7 @@ namespace Kursach.Models
                 case 8:
                     break;
                 case 9:
+                    currentLimit = deathFrames;
                     break;
 
             }
@@ -105,10 +115,18 @@ namespace Kursach.Models
             if (currentFrame < currentLimit - 1)
                 currentFrame++;
             else currentFrame = 0;
-            g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize), 
-                32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+            if (!isUnderAttack)
+                g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize),
+                    32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+            else
+            {
+                g.DrawImage(spriteSheetUnderAttack, new Rectangle(new Point(posX, posY), playerModelSize),
+                    32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+                isUnderAttack = false;
+            }
             //Pen blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 5);
-            //g.DrawRectangle(blackPen, new Rectangle(new Point(posX, posY), playerModelSize));
+            //g.DrawRectangle(blackPen, new Rectangle(new Point(posX + 22, posY + 30), new Size((int)(playerModelSize.Width/1.5), 
+            //(int)(playerModelSize.Width/1.3))));
         }
     }
 }

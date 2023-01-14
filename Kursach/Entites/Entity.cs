@@ -30,10 +30,13 @@ namespace Kursach.Entites
         public int size;
 
         public Image spriteSheet;
+        public Image spriteSheetUnderAttack;
 
         public Size playerModelSize;
 
         public int hitPoints;
+
+        public bool isUnderAttack;
 
         public Entity()
         {
@@ -44,13 +47,14 @@ namespace Kursach.Entites
         {
             this.posX = posX;
             this.posY = posY;
-            dirX = 5;
-            dirY = 5;
+            dirX = 0;
+            dirY = 0;
             this.spriteSheet = spriteSheet;
             currentAnimation = 0;
             currentFrame = 0;
             flip = 1;
             isMoving = false;
+            isUnderAttack = false;
         }
 
         virtual public void Move(int howMove)

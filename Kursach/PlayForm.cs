@@ -194,6 +194,18 @@ namespace Kursach
 
         public void Update(object sender, EventArgs e)
         {
+            if (player.isAttack)
+                if (PhysicsController.isAttack(player, gladiator))
+                {
+                    gladiator.isUnderAttack = true;
+                    gladiator.hitPoints -= player.powerOfAttack;
+                    if (gladiator.hitPoints == 0)
+                    {
+                        if (gladiator.flip == 1)
+                            gladiator.SetAnimationConfiguration(4);
+                        else gladiator.SetAnimationConfiguration(9);
+                    }
+                }
             if (PhysicsController.isCollide(player, gladiator))
             {
                 player.posX = 960;

@@ -20,6 +20,8 @@ namespace Kursach.Models
         public bool attackIsOver;
         public bool spaceIsUp;
 
+        public int powerOfAttack;
+
         public Hero()
         {
 
@@ -45,6 +47,8 @@ namespace Kursach.Models
             playerModelSize = new Size(150, 150);
 
             hitPoints = 1;
+
+            powerOfAttack = 1;
         }
 
         override public void SetAnimationConfiguration(int currentAnimation)
@@ -101,8 +105,13 @@ namespace Kursach.Models
             else currentFrame = 0;
             g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize), 
                 32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
-            //Pen blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 5);
-            //g.DrawRectangle(blackPen, new Rectangle(new Point(posX, posY), playerModelSize));
+
+            Pen blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 2);
+            //if (flip == 1)
+              //  g.DrawRectangle(blackPen, new Rectangle(new Point(posX+playerModelSize.Width-45, posY+40), new Size(50, playerModelSize.Width-40)));
+            //else g.DrawRectangle(blackPen, new Rectangle(new Point(posX+5, posY + 40), new Size(45, playerModelSize.Width - 40)));
+            //g.DrawRectangle(blackPen, new Rectangle(new Point(posX+30, posY+50), new Size((int)(playerModelSize.Width / 1.5),
+            //(int)(playerModelSize.Width / 1.5))));
         }
 
         public void PlayAttack(Graphics g)
