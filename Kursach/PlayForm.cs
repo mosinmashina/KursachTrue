@@ -23,7 +23,7 @@ namespace Kursach
         public Image dwarfSheet;
         public Image gladiatorSheet;
         public Hero player;
-        public Gladiator gladiator;
+        public List<Gladiator> gladiators = new List<Gladiator>();
         public PlayForm()
         {
             InitializeComponent();
@@ -188,39 +188,52 @@ namespace Kursach
             gladiatorSheet = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\Gladiator.png");
 
             player = new Hero(500, 500, dwarfSheet);
-            gladiator = new Gladiator(300, 300, gladiatorSheet);
+            gladiators.Add(new Gladiator(300, 300, gladiatorSheet));
+            //gladiators.Add(new Gladiator(100, 100, gladiatorSheet));
             timer1.Start();
         }
 
         public void Update(object sender, EventArgs e)
         {
-            if (player.isAttack)
-                if (PhysicsController.isAttack(player, gladiator))
+            foreach (Gladiator gladiator in gladiators.ToList())
+                if (gladiator.animationDeathIsOver == true)
                 {
-                    gladiator.isUnderAttack = true;
-                    gladiator.hitPoints -= player.powerOfAttack;
-                    if (gladiator.hitPoints == 0)
-                    {
-                        if (gladiator.flip == 1)
-                            gladiator.SetAnimationConfiguration(4);
-                        else gladiator.SetAnimationConfiguration(9);
-                    }
+                    gladiators.Remove(gladiator);
+                    gladiators.Add(new Gladiator(300, 300, gladiatorSheet));
                 }
-            if (PhysicsController.isCollide(player, gladiator))
+            if (player.isAttack)
+                foreach(Gladiator gladiator in gladiators)
+                    if (PhysicsController.isAttack(player, gladiator))
+                    {
+                        gladiator.isUnderAttack = true;
+                        gladiator.hitPoints -= player.powerOfAttack;
+                        if (gladiator.hitPoints == 0)
+                        {
+                            if (gladiator.flip == 1)
+                                gladiator.SetAnimationConfiguration(4);
+                            else gladiator.SetAnimationConfiguration(9);
+                            gladiator.currentFrame = 0;
+                        }
+                    }
+            foreach (Gladiator gladiator in gladiators)
             {
-                player.posX = 960;
-                player.posY = 540;
+                if (PhysicsController.isCollide(player, gladiator))
+                {
+                    player.posX = 960;
+                    player.posY = 540;
+                }
+                gladiator.changeDirection(player);
             }
             if (player.isMoving)
                 player.Move(PhysicsController.isOutOfMap(player));
-            gladiator.changeDirection(player);
             Invalidate();
         }
 
         private void OnPaint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            gladiator.PlayAnimation(g);
+            foreach(Gladiator gladiator in gladiators)
+                gladiator.PlayAnimation(g);
             if (player.isAttack && player.spaceIsUp)
                 player.PlayAttack(g);
             else 

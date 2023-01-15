@@ -38,6 +38,8 @@ namespace Kursach.Entites
 
         public bool isUnderAttack;
 
+        public bool animationDeathIsOver;
+
         public Entity()
         {
 
@@ -55,6 +57,7 @@ namespace Kursach.Entites
             flip = 1;
             isMoving = false;
             isUnderAttack = false;
+            animationDeathIsOver = false;
         }
 
         virtual public void Move(int howMove)

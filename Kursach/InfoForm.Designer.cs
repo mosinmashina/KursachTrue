@@ -30,27 +30,21 @@ namespace Kursach
         private void InitializeComponent()
         {
             this.Return = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(541, 359);
+            this.Return.BackgroundImage = global::Kursach.Properties.Resources.imgonline_com_ua_Resize_iKcNQWXA7r;
+            this.Return.FlatAppearance.BorderSize = 0;
+            this.Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Return.Location = new System.Drawing.Point(31, 948);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(199, 64);
+            this.Return.Size = new System.Drawing.Size(320, 90);
             this.Return.TabIndex = 0;
-            this.Return.Text = "Назад";
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(47, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(471, 27);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Игра про зомби и скелетов ;)";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Return.MouseEnter += new System.EventHandler(this.Return_MouseEnter);
+            this.Return.MouseLeave += new System.EventHandler(this.Return_MouseLeave);
             // 
             // InfoForm
             // 
@@ -58,9 +52,9 @@ namespace Kursach
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.textBox1);
+            this.BackgroundImage = global::Kursach.Properties.Resources.fotor_2023_1_15_3_54_46;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1902, 1080);
             this.Controls.Add(this.Return);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -69,13 +63,11 @@ namespace Kursach
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InfoForm_FormClosed);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button Return;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

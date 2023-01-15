@@ -63,6 +63,26 @@ namespace Kursach.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _123 {
+            get {
+                object obj = ResourceManager.GetObject("123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1234 {
+            get {
+                object obj = ResourceManager.GetObject("1234", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cosmos_2 {
             get {
                 object obj = ResourceManager.GetObject("cosmos_2", resourceCulture);
@@ -76,6 +96,176 @@ namespace Kursach.Properties {
         internal static System.Drawing.Bitmap cosmos_21 {
             get {
                 object obj = ResourceManager.GetObject("cosmos_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_1_21_56 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_1_21_56", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_1_21_561 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_1_21_561", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_2_29_0 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_2_29_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_2_30_55 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_2_30_55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_3_48_14 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_3_48_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_3_49_49 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_3_49_49", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_3_54_46 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_3_54_46", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gladiator {
+            get {
+                object obj = ResourceManager.GetObject("Gladiator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_5fNLONJPbu9B {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-5fNLONJPbu9B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_b1qreUGNPLCxgdA {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-b1qreUGNPLCxgdA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_cf91T8gwoxee5mM {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-cf91T8gwoxee5mM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_GPzpH18bVujQeXb {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-GPzpH18bVujQeXb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_iKcNQWXA7r {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-iKcNQWXA7r", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map_transformed {
+            get {
+                object obj = ResourceManager.GetObject("map-transformed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map_transformed1 {
+            get {
+                object obj = ResourceManager.GetObject("map-transformed1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mapMain {
+            get {
+                object obj = ResourceManager.GetObject("mapMain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WallPaper {
+            get {
+                object obj = ResourceManager.GetObject("WallPaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -54,7 +54,6 @@ namespace Kursach.Models
         override public void SetAnimationConfiguration(int currentAnimation)
         {
             this.currentAnimation = currentAnimation;
-
             switch (currentAnimation)
             {
                 case 0:

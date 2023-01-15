@@ -10,7 +10,6 @@ namespace Kursach.Models
 {
     public class Gladiator : Entity
     {
-        public bool slowDeath;
 
         public Gladiator()
         {
@@ -28,7 +27,6 @@ namespace Kursach.Models
             playerModelSize = new Size(150, 150);
             hitPoints = 3;
             spriteSheetUnderAttack = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\GladiatorUnderAttack.png");
-            slowDeath = true;
         }
 
         public override void Move(int howMove)
@@ -112,6 +110,18 @@ namespace Kursach.Models
 
         public override void PlayAnimation(Graphics g)
         {
+            if (currentAnimation == 4 || currentAnimation == 9)
+            {
+                if (currentFrame < currentLimit - 1)
+                    currentFrame++;
+                else currentFrame = 0;
+                if (currentFrame == 0)
+                    animationDeathIsOver = true;
+                if (!animationDeathIsOver)
+                    g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize),
+                    32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+                return;
+            }
             if (currentFrame < currentLimit - 1)
                 currentFrame++;
             else currentFrame = 0;
