@@ -17,6 +17,9 @@ namespace Kursach
 {
     public partial class PlayForm : Form
     {
+        PauseForm pauseForm = new PauseForm();
+        public bool isPause;
+
         const int playerSpeedX = 10;
         const int playerSpeedY = 10;
 
@@ -27,6 +30,9 @@ namespace Kursach
         public PlayForm()
         {
             InitializeComponent();
+
+            pauseForm.Owner = this;
+            isPause = false;
 
             timer1.Interval = 41;
             timer1.Tick += new EventHandler(Update);
@@ -177,7 +183,10 @@ namespace Kursach
                     else player.SetAnimationConfiguration(7);
                     break;
                 case Keys.Escape:
-                    Application.Exit();
+                    Records.saveScore("qwe", 23);
+                    isPause = true;
+                    this.Hide();
+                    pauseForm.ShowDialog();
                     break;
             }
         }
@@ -195,6 +204,8 @@ namespace Kursach
 
         public void Update(object sender, EventArgs e)
         {
+            if (isPause)
+                return;
             foreach (Gladiator gladiator in gladiators.ToList())
                 if (gladiator.animationDeathIsOver == true)
                 {
@@ -253,5 +264,6 @@ namespace Kursach
         {
 
         }
+
     }
 }

@@ -213,6 +213,16 @@ namespace Kursach.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_e2A3uOyMZO9xH__1_ {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-e2A3uOyMZO9xH (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgonline_com_ua_Resize_GPzpH18bVujQeXb {
             get {
                 object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-GPzpH18bVujQeXb", resourceCulture);
@@ -226,6 +236,16 @@ namespace Kursach.Properties {
         internal static System.Drawing.Bitmap imgonline_com_ua_Resize_iKcNQWXA7r {
             get {
                 object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-iKcNQWXA7r", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_QcgXPJBZ3374 {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-QcgXPJBZ3374", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

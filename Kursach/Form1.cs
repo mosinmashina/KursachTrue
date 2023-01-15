@@ -8,17 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-using System.Drawing;
 
 namespace Kursach
 {
     public partial class Menu : Form
     {
         InfoForm infoForm = new InfoForm();
+        PlayForm playForm;
+        bool gameIsOpen;
+        bool gameIsClose;
         public Menu()
         {
             InitializeComponent();
             infoForm.Owner = this;
+            gameIsClose = false;
+            gameIsOpen = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,8 +33,9 @@ namespace Kursach
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PlayForm playform = new PlayForm();
-            playform.Show();
+            gameIsOpen = true;
+            playForm = new PlayForm();
+            playForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
