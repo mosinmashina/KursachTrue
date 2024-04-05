@@ -118,14 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="imgonline-com-ua-Resize-cf91T8gwoxee5mM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgonline-com-ua-Resize-cf91T8gwoxee5mM.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fotor_2023-1-15_23_24_54" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fotor_2023-1-15_23_24_54.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fotor_2023-1-15_1_21_561" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Sprites\fotor_2023-1-15_1_21_56.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgonline-com-ua-Resize-QcgXPJBZ3374" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgonline-com-ua-Resize-QcgXPJBZ3374.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map-transformed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="map-transformed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\map-transformed.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgonline-com-ua-Resize-e2A3uOyMZO9xH (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgonline-com-ua-Resize-e2A3uOyMZO9xH (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mapMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\mapMain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,8 +136,11 @@
   <data name="123" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\123.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cosmos_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cosmos_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgonline-com-ua-Resize-rWKSaSGSUdnUTETi (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgonline-com-ua-Resize-rWKSaSGSUdnUTETi (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgonline-com-ua-Resize-tgh4zcl0ulSnqv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgonline-com-ua-Resize-tgh4zcl0ulSnqv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fotor_2023-1-15_3_48_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotor_2023-1-15_3_48_14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +148,23 @@
   <data name="imgonline-com-ua-Resize-GPzpH18bVujQeXb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgonline-com-ua-Resize-GPzpH18bVujQeXb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1234" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\1234.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map-transformed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\map-transformed.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Gladiator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\Gladiator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgonline-com-ua-Resize-e2A3uOyMZO9xH (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgonline-com-ua-Resize-e2A3uOyMZO9xH (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WallPaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Sprites\WallPaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cosmos_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cosmos_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgonline-com-ua-Resize-iKcNQWXA7r" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgonline-com-ua-Resize-iKcNQWXA7r.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WallPaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\WallPaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fotor_2023-1-15_2_30_55" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotor_2023-1-15_2_30_55.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +175,8 @@
   <data name="imgonline-com-ua-Resize-5fNLONJPbu9B" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\imgonline-com-ua-Resize-5fNLONJPbu9B.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fotor_2023-1-15_2_29_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fotor_2023-1-15_2_29_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgonline-com-ua-Resize-cf91T8gwoxee5mM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgonline-com-ua-Resize-cf91T8gwoxee5mM.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fotor_2023-1-15_3_54_46" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotor_2023-1-15_3_54_46.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +184,8 @@
   <data name="fotor_2023-1-15_1_21_56" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\fotor_2023-1-15_1_21_56.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1234" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Sprites\1234.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fotor_2023-1-15_2_29_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fotor_2023-1-15_2_29_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cosmos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cosmos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,10 +193,10 @@
   <data name="fotor_2023-1-15_3_49_49" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotor_2023-1-15_3_49_49.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map-transformed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Sprites\map-transformed.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fotor_2023-1-15_1_21_561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\fotor_2023-1-15_1_21_56.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgonline-com-ua-Resize-QcgXPJBZ3374" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgonline-com-ua-Resize-QcgXPJBZ3374.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backBut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\backBut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

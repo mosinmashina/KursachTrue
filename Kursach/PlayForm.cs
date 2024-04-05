@@ -17,25 +17,42 @@ namespace Kursach
 {
     public partial class PlayForm : Form
     {
-        PauseForm pauseForm = new PauseForm();
+        PauseForm pauseForm;
+        EndGameForm endGameForm;
         public bool isPause;
+
+        public string playerName;
+        public int playerScore;
 
         const int playerSpeedX = 10;
         const int playerSpeedY = 10;
 
         public Image dwarfSheet;
         public Image gladiatorSheet;
+        public Image HpImage;
+
         public Hero player;
         public List<Gladiator> gladiators = new List<Gladiator>();
-        public PlayForm()
+
+        Random rnd;
+
+        public PlayForm(string playerName)
         {
             InitializeComponent();
 
+            pauseForm = new PauseForm();
             pauseForm.Owner = this;
             isPause = false;
+            this.playerName = playerName;
+            playerScore = 0;
+            rnd = new Random();
+            endGameForm = null;
 
             timer1.Interval = 41;
             timer1.Tick += new EventHandler(Update);
+
+            timer2.Interval = 2000;
+            timer2.Tick += new EventHandler(UpdateEnemy);
 
             KeyDown += new KeyEventHandler(OnPress);
             KeyUp += new KeyEventHandler(OnKeyUp);
@@ -45,6 +62,8 @@ namespace Kursach
 
         public void OnKeyUp(object sender, KeyEventArgs e)
         {
+            if (player.isFinal == true)
+                return;
             if (e.KeyCode == Keys.Space)
                 player.spaceIsUp = true;
             if (player.spaceIsUp == true && player.isAttack == true)
@@ -102,6 +121,8 @@ namespace Kursach
 
         public void OnPress(object sender, KeyEventArgs e)
         {
+            if (player.isFinal == true)
+                return;
             if (player.isAttack)
                 switch(e.KeyCode)
                 {
@@ -183,7 +204,6 @@ namespace Kursach
                     else player.SetAnimationConfiguration(7);
                     break;
                 case Keys.Escape:
-                    Records.saveScore("qwe", 23);
                     isPause = true;
                     this.Hide();
                     pauseForm.ShowDialog();
@@ -195,22 +215,23 @@ namespace Kursach
         {
             dwarfSheet = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\Dwarf.png");
             gladiatorSheet = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\Gladiator.png");
+            HpImage = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\Heart1.png");
 
             player = new Hero(500, 500, dwarfSheet);
-            gladiators.Add(new Gladiator(300, 300, gladiatorSheet));
-            //gladiators.Add(new Gladiator(100, 100, gladiatorSheet));
             timer1.Start();
+            timer2.Start();
         }
 
         public void Update(object sender, EventArgs e)
         {
-            if (isPause)
+            if (isPause || endGameForm != null)
                 return;
             foreach (Gladiator gladiator in gladiators.ToList())
                 if (gladiator.animationDeathIsOver == true)
                 {
                     gladiators.Remove(gladiator);
-                    gladiators.Add(new Gladiator(300, 300, gladiatorSheet));
+                    playerScore += 1;
+                    this.button1.Text = playerScore.ToString();
                 }
             if (player.isAttack)
                 foreach(Gladiator gladiator in gladiators)
@@ -228,13 +249,35 @@ namespace Kursach
                     }
             foreach (Gladiator gladiator in gladiators)
             {
-                if (PhysicsController.isCollide(player, gladiator))
+                if (PhysicsController.isCollide(player, gladiator) && player.isFinal == false)
                 {
-                    player.posX = 960;
-                    player.posY = 540;
+                    if (player.posX > gladiator.posX)
+                        player.posX += 150;
+                    else player.posX -= 150;
+                    player.hitPoints -= 1;
+                    player.isUnderAttack = true;
+                    if (player.hitPoints == 0)
+                    {
+                        timer1.Interval = 150;
+                        player.isFinal = true;
+                        if (player.flip == 1)
+                            player.SetAnimationConfiguration(4);
+                        else player.SetAnimationConfiguration(9);
+                        player.currentFrame = 0;
+                    }
                 }
                 gladiator.changeDirection(player);
             }
+            if (player.isFinal == true && player.animationDeathIsOver == true)
+            {
+                Records.saveScore(playerName, playerScore);
+                pauseForm.Close();
+                this.Hide();
+                endGameForm = new EndGameForm(playerScore);
+                endGameForm.Owner = this;
+                endGameForm.Show();
+            }
+
             if (player.isMoving)
                 player.Move(PhysicsController.isOutOfMap(player));
             Invalidate();
@@ -249,6 +292,41 @@ namespace Kursach
                 player.PlayAttack(g);
             else 
             player.PlayAnimation(g);
+            if (player.hitPoints == 3)
+            {
+                g.DrawImage(HpImage, 1600, 50, 80, 80);
+                g.DrawImage(HpImage, 1680, 50, 80, 80);
+                g.DrawImage(HpImage, 1760, 50, 80, 80);
+            }
+            else if (player.hitPoints == 2)
+            {
+                g.DrawImage(HpImage, 1680, 50, 80, 80);
+                g.DrawImage(HpImage, 1760, 50, 80, 80);
+            }
+            else
+            {
+                g.DrawImage(HpImage, 1680, 50, 80, 80);
+            }
+        }
+
+        public void UpdateEnemy(object sender, EventArgs e)
+        {
+            if (isPause)
+                return;
+            int value1, value2;
+            value1 = rnd.Next(-200, 2100);
+            if (value1 > -50 || value1 < 2000)
+            {
+                int r = rnd.Next(0, 2);
+                if (r == 0)
+                    value2 = rnd.Next(-200, -100);
+                else
+                    value2 = rnd.Next(1100, 1200);
+            }
+            else value2 = rnd.Next(0, 1080);
+            gladiators.Add(new Gladiator(value1, value2, gladiatorSheet));
+            if (playerScore % 5 == 0 && timer2.Interval > 200)
+                timer2.Interval -= 50;
         }
 
         private void PlayForm_KeyDown(object sender, KeyEventArgs e)
@@ -265,5 +343,9 @@ namespace Kursach
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

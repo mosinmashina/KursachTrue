@@ -22,6 +22,8 @@ namespace Kursach.Models
 
         public int powerOfAttack;
 
+        public bool isFinal;
+
         public Hero()
         {
 
@@ -46,9 +48,13 @@ namespace Kursach.Models
 
             playerModelSize = new Size(150, 150);
 
-            hitPoints = 1;
+            hitPoints = 3;
 
             powerOfAttack = 1;
+
+            isFinal = false;
+
+            spriteSheetUnderAttack = new Bitmap(@"C:\Users\dmosi\source\repos\Kursach\Kursach\Sprites\DwarfUnderAttack.png");
         }
 
         override public void SetAnimationConfiguration(int currentAnimation)
@@ -77,6 +83,9 @@ namespace Kursach.Models
                 case 7:
                     currentLimit = attackFrames;
                     break;
+                case 9:
+                    currentLimit = deathFrames;
+                    break;
             }
         }
 
@@ -99,14 +108,33 @@ namespace Kursach.Models
 
         public override void PlayAnimation(Graphics g)
         {
+            if (currentAnimation == 4 || currentAnimation == 9)
+            {
+                if (currentFrame < currentLimit - 1)
+                    currentFrame++;
+                else currentFrame = 0;
+                if (currentFrame == 0)
+                    animationDeathIsOver = true;
+                if (!animationDeathIsOver)
+                    g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize),
+                    32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+                return;
+            }
             if (currentFrame < currentLimit - 1)
                 currentFrame++;
             else currentFrame = 0;
-            g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize), 
-                32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+            if (!isUnderAttack)
+                g.DrawImage(spriteSheet, new Rectangle(new Point(posX, posY), playerModelSize),
+                    32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+            else
+            {
+                g.DrawImage(spriteSheetUnderAttack, new Rectangle(new Point(posX, posY), playerModelSize),
+                    32f * currentFrame, 32 * currentAnimation, size, size, GraphicsUnit.Pixel);
+                isUnderAttack = false;
+            }
 
             Pen blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 2);
-            //if (flip == 1)
+            //(flip == 1)
               //  g.DrawRectangle(blackPen, new Rectangle(new Point(posX+playerModelSize.Width-45, posY+40), new Size(50, playerModelSize.Width-40)));
             //else g.DrawRectangle(blackPen, new Rectangle(new Point(posX+5, posY + 40), new Size(45, playerModelSize.Width - 40)));
             //g.DrawRectangle(blackPen, new Rectangle(new Point(posX+30, posY+50), new Size((int)(playerModelSize.Width / 1.5),

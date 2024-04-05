@@ -83,6 +83,16 @@ namespace Kursach.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backBut {
+            get {
+                object obj = ResourceManager.GetObject("backBut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cosmos_2 {
             get {
                 object obj = ResourceManager.GetObject("cosmos_2", resourceCulture);
@@ -136,6 +146,16 @@ namespace Kursach.Properties {
         internal static System.Drawing.Bitmap fotor_2023_1_15_2_30_55 {
             get {
                 object obj = ResourceManager.GetObject("fotor_2023-1-15_2_30_55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotor_2023_1_15_23_24_54 {
+            get {
+                object obj = ResourceManager.GetObject("fotor_2023-1-15_23_24_54", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +266,26 @@ namespace Kursach.Properties {
         internal static System.Drawing.Bitmap imgonline_com_ua_Resize_QcgXPJBZ3374 {
             get {
                 object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-QcgXPJBZ3374", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_rWKSaSGSUdnUTETi__1_ {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-rWKSaSGSUdnUTETi (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgonline_com_ua_Resize_tgh4zcl0ulSnqv {
+            get {
+                object obj = ResourceManager.GetObject("imgonline-com-ua-Resize-tgh4zcl0ulSnqv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

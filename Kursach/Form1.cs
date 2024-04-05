@@ -14,27 +14,36 @@ namespace Kursach
     public partial class Menu : Form
     {
         InfoForm infoForm = new InfoForm();
+        RecordsForm recordsForm;
         PlayForm playForm;
-        bool gameIsOpen;
-        bool gameIsClose;
+
+        string playerName;
         public Menu()
         {
             InitializeComponent();
             infoForm.Owner = this;
-            gameIsClose = false;
-            gameIsOpen = false;
+            recordsForm = null;
+            playForm = null;
+            playerName = "Anonimus";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (recordsForm != null)
+                recordsForm.Close();
+            recordsForm = new RecordsForm();
+            recordsForm.Owner = this;
+            this.Hide();
+            recordsForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            gameIsOpen = true;
-            playForm = new PlayForm();
+            if (playForm != null)
+                playForm.Close();
+            playForm = new PlayForm(playerName);
+            playForm.Owner = this;
             playForm.Show();
         }
 
@@ -103,6 +112,23 @@ namespace Kursach
         private void BtnExit_MouseLeave(object sender, EventArgs e)
         {
             BtnExit.BackgroundImage = global::Kursach.Properties.Resources.imgonline_com_ua_Resize_GPzpH18bVujQeXb;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Visible = false;
+            this.checkBox1.Visible = false;
+            playerName = this.checkBox1.Text;
         }
     }
 }

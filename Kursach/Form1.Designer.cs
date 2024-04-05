@@ -34,6 +34,8 @@ namespace Kursach
             this.BtnPlay = new System.Windows.Forms.Button();
             this.BtnRules = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // BtnRecords
@@ -95,6 +97,26 @@ namespace Kursach
             this.BtnExit.MouseEnter += new System.EventHandler(this.BtnExit_MouseEnter);
             this.BtnExit.MouseLeave += new System.EventHandler(this.BtnExit_MouseLeave);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(47, 971);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(294, 27);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "Введите ваше имя и нажмите на галочку";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(347, 977);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -104,6 +126,8 @@ namespace Kursach
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnRules);
             this.Controls.Add(this.BtnPlay);
@@ -116,6 +140,7 @@ namespace Kursach
             this.Activated += new System.EventHandler(this.Menu_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,6 +150,8 @@ namespace Kursach
         private System.Windows.Forms.Button BtnPlay;
         private System.Windows.Forms.Button BtnRules;
         private System.Windows.Forms.Button BtnExit;
+        private TextBox textBox1;
+        private CheckBox checkBox1;
     }
 }
 
